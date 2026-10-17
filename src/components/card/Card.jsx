@@ -6,6 +6,7 @@ export function Card() {
 
   const [user, setUSer] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   async function loadStream() {
     try {
@@ -19,7 +20,7 @@ export function Card() {
         console.log(json.streamers[0].username);
       }
     } catch (error) {
-      setUSer('Deu erro');
+      setUSer(error.message);
     }
   }
 
@@ -28,6 +29,7 @@ export function Card() {
   }, []);
 
   if (loading) return <p>Carregando...</p>;
+  if (error) return <p>Erro: {error}</p>;
   return (
     <section>
       <div>
