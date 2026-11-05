@@ -1,3 +1,7 @@
 export function Header() {
-  return <div>Stream Filter</div>;
+  return (
+    <header className="header">
+      <div>Stream Filter</div>
+    </header>
+  );
 }

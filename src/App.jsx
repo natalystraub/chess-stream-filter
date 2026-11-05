@@ -7,7 +7,7 @@ function App() {
   return (
     <section>
       <Header />
-      <main>
+      <main className="main">
         <Description />
         <Card />
       </main>
