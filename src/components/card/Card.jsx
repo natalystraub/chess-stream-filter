@@ -41,9 +41,9 @@ export function Card() {
       <div className={styles.card}>
         {users.slice(0, pages).map((user, i) => (
           <div className={styles.cardContainer} key={i}>
-            <div className={styles.image}>{user.avatar && <img src={user.avatar} alt={user.usersname} />}</div>
+            <div className={styles.image}>{user.avatar && <img src={user.avatar} alt={user.username} />}</div>
 
-            <div className={styles.usersname}>
+            <div className={styles.username}>
               <p>{user.username}</p>
 
               {user.is_live && (
